@@ -1,0 +1,33 @@
+[project]
+name = "idp-pot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ezell", email = "iamezell@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "boto3>=1.43.80",
+    "pillow>=12.3.0",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.15.0",
+    "pymupdf>=1.28.2",
+    "pypdf>=6.16.2",
+    "python-dotenv>=1.2.3",
+]
+
+[project.scripts]
+idp-pot = "idp_pot:main"
+
+[build-system]
+requires = ["uv_build>=0.12.6,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "jupyterlab>=4.6.3",
+    "pytest>=9.1.1",
+    "ruff>=0.16.4",
+]
