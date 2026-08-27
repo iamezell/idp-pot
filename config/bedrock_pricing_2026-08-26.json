@@ -1,0 +1,30 @@
+{
+  "pricing_observation_date": "2026-08-26",
+  "pricing_scope": "AWS Bedrock Standard In-Region & Geo Cross Region",
+  "currency": "USD",
+  "source": "Anthropic Claude Model Pricing — AWS Bedrock",
+  "unit": "USD per 1,000,000 tokens",
+  "models": {
+    "claude_haiku_4_5": {
+      "display_name": "Claude Haiku 4.5",
+      "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "input_price_per_1m": 1.10,
+      "output_price_per_1m": 5.50,
+      "result_jsonl": "artifacts/cost_slice/claude_haiku_4_5.jsonl"
+    },
+    "claude_sonnet_4_6": {
+      "display_name": "Claude Sonnet 4.6",
+      "model_id": "us.anthropic.claude-sonnet-4-6",
+      "input_price_per_1m": 3.30,
+      "output_price_per_1m": 16.50,
+      "result_jsonl": "artifacts/cost_slice/claude_sonnet_4_6.jsonl"
+    },
+    "claude_opus_4_6": {
+      "display_name": "Claude Opus 4.6",
+      "model_id": "us.anthropic.claude-opus-4-6-v1",
+      "input_price_per_1m": 5.50,
+      "output_price_per_1m": 27.50,
+      "result_jsonl": "artifacts/cost_slice/claude_opus_4_6.jsonl"
+    }
+  }
+}
