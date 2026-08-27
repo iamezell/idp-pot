@@ -14,8 +14,7 @@ import boto3
 from dotenv import load_dotenv
 from PIL import Image
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from textract_detect_text import (
+from idp_pot.textract_detect import (
     inspect_response,
     obtain_detect_document_text,
     print_summary,
@@ -121,7 +120,9 @@ def main() -> int:
             continue
 
         width, height = image_size(path)
-        response, cache_status, error = obtain_detect_document_text(path, textract)
+        response, cache_status, error, _latency = obtain_detect_document_text(
+            path, textract
+        )
         if error:
             print(f"FAILED {path.name}: {error}", file=sys.stderr)
             row = empty_row(path, transformation, cache_status)
